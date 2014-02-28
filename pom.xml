@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
     <artifactId>deckard</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>apk</packaging>
-    <name>Deckard</name>
-    <description>Who is the replicant here?</description>
+    <name>deckard</name>
+    <description>Not green or blue.</description>
 
     <dependencies>
-
-        <!--main-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -20,7 +18,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!--android & robolectric-->
         <dependency>
             <groupId>org.robolectric</groupId>
             <artifactId>robolectric</artifactId>
@@ -112,7 +109,6 @@
                 <version>3.8.0</version>
                 <configuration>
                     <sdk>
-                        <!-- platform or api level (api level 4 = platform 1.6)-->
                         <platform>18</platform>
                     </sdk>
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>
@@ -147,8 +143,8 @@
                             <removeExistingSignatures>true</removeExistingSignatures>
                             <archiveDirectory/>
                             <includes>
-                            <include>target/tddrampup.apk</include>
-                        </includes>
+                                <include>target/tddrampup.apk</include>
+                            </includes>
                             <keystore>tdd-rampup.keystore</keystore>
                             <alias>tdd</alias>
                             <storepass>rampup1</storepass>
@@ -178,7 +174,6 @@
                         <version>3.8.0</version>
                         <configuration>
                             <sdk>
-                                <!-- platform or api level (api level 4 = platform 1.6)-->
                                 <platform>18</platform>
                             </sdk>
                             <undeployBeforeDeploy>true</undeployBeforeDeploy>
@@ -195,7 +190,6 @@
                             </emma>
                             <dex>
                                 <noLocals>true</noLocals>
-                                <!--  must be set for emma -->
                             </dex>
                         </configuration>
                         <extensions>true</extensions>
@@ -218,5 +212,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>
